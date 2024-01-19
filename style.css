@@ -1,0 +1,186 @@
+@font-face {
+    font-family: poppin-reg;
+    src:url("./assets/fonts/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: poppin-bold;
+    src:url("./assets/fonts/Poppins-Bold.ttf");
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.req.show {
+    display: block;
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+    font-size: 62.5%;
+    font-family: poppin-reg, sans-serif;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Main Styling*/
+main {
+    padding: 3rem;
+    width: 80rem;
+    height: 50rem;
+    background-color: white;
+    border-radius: 1rem 1rem 10rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.partition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partition hr {
+    border: none;
+    border-top: 1px dotted black;
+    width: 100%;
+}
+.partition button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+#arrow {
+    height: 6rem;
+    aspect-ratio: 1;
+    background-color: #864dfe;
+    padding: 1rem;
+    border-radius: 50%;
+}
+#arrow:hover {
+    background-color: black;
+}
+
+/*Form Styling*/
+#age-input {
+    display: flex;
+    gap: 2rem;
+}
+#age-input label {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#age-input p {
+    font-style: italic;
+}
+#age-input input {
+    border: 1px solid black;
+}
+.day.error {
+    color: darkred;
+}
+.day.error > input {
+    border: 1px solid darkred;
+}
+
+.month.error {
+    color: darkred;
+}
+.month.error > input {
+    border: 1px solid darkred;
+}
+.year.error {
+    color: darkred;
+}
+.year.error > input {
+    border: 1px solid darkred;
+}
+
+.req {
+    display: none;
+}
+.invalid {
+    display: none;
+}
+
+.req.active {
+    display: block;
+}
+
+.invalid.active {
+    display: block;
+}
+#age-input > div > input {
+    height: 3rem;
+    width: 15rem;
+    font-family: poppin-bold, sans-serif;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+.day, .month, .year {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    height: 7rem;
+}
+
+
+
+/*Age styling*/
+#age {
+    flex: 1;
+}
+
+#age  {
+    font-size: 3.5rem;
+    font-family: poppin-bold, sans-serif;
+}
+
+.purple {
+    color: rebeccapurple;
+    font-size: 5rem;
+}
+@media screen and (max-width: 900px) {
+    main {
+        width: 90%;
+        height: 65%;
+        margin: 0 auto;
+        gap: 8rem;
+    }
+
+    #age-input > div > input {
+        width: 100%;
+    }
+    #age-input > div > label {
+       font-size: 1.8rem;
+    }
+    .partition {
+        position: relative;
+    }
+    #get-age {
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .req, .invalid {
+        font-size: .9rem;
+    }
+
+}

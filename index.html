@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="./index.js" defer></script>
+    <title>Frontend Mentor | Age calculator app</title>
+    
+</head>
+<body>
+
+<main>
+    <form id="age-input" name="age">
+        <div class="day">
+            <label for="day">DAY</label>
+            <input type="text" name="day" id="day" pattern="[0-9]{2}" minlength="2" maxlength="2" placeholder="DD" required>
+            <p class="req">This field is required</p>
+            <p class="invalid">This field is invalid</p>
+        </div>
+        <div class="month">
+            <label for="month" >MONTH</label>
+            <input type="text" name="month" id="month" pattern="[0-9]{2}" minlength="2" maxlength="2" placeholder="MM" required>
+            <p class="req">This field is required</p>
+            <p class="invalid">This field is invalid</p>
+        </div>
+        <div class="year">
+            <label for="year">YEAR</label>
+            <input type="text" name="year" id="year" pattern="[0-9]{4}" minlength="4" maxlength="4" placeholder="YYYY" required>
+            <p class="req">This field is required</p>
+            <p class="invalid">This field is invalid</p>
+        </div>
+    </form>
+    <section class="partition">
+        <hr>
+        <button type="submit" id="get-age"><img src="./assets/images/icon-arrow.svg" alt="arrow" id="arrow"></button>
+    </section>
+    <section id="age">
+        <h1><span class="purple" data-years>--</span> years</h1>
+        <h1><span class="purple" data-months>--</span> months</h1>
+        <h1><span class="purple" data-days>--</span> days</h1>
+
+
+    </section>
+</main>
+</body>
+</html>
